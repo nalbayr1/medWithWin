@@ -1,0 +1,78 @@
+/* styles/globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles */
+
+@keyframes gradient-xy {
+  0%, 100% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+}
+
+.animate-gradient-xy {
+  background-size: 200% 200%;
+  animation: gradient-xy 15s ease infinite;
+}
+
+/* Floating shapes styles */
+.shape-circle {
+  top: 40%;
+  left: 65%;
+  transform: translate(-50%, -50%);
+  width: 700px;
+  height: 700px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  position: absolute;
+}
+
+.shape-triangle {
+  bottom: 0%;
+  right: -5%;
+  transform: translate(50%, 50%);
+  width: 0;
+  height: 0;
+  border-left: 200px solid transparent;
+  border-right: 200px solid transparent;
+  border-bottom: 400px solid rgba(255, 255, 255, 0.1);
+  position: absolute;
+}
+
+
+/* Floating shapes styles */
+.shape-circle2 {
+    top: -15%;
+    left: -12%;
+    transform: translate(-50%, -50%);
+    width: 700px;
+    height: 700px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    position: absolute;
+  }
+
+/* Floating animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* For staggered animation delays */
+.delay-2s {
+  animation-delay: 2s;
+}
+
+.delay-4s {
+  animation-delay: 4s;
+}
+
+/* Other global styles can be added below */
